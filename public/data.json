@@ -1,0 +1,98 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with glossy blue finish",
+    "image": "https://i.ibb.co/6WzYyZL/tile1.jpg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Modern Marble Tile",
+    "description": "Elegant marble tile for luxury interiors",
+    "image": "https://i.ibb.co/Y8h8Q2n/tile2.jpg",
+    "category": "marble",
+    "price": 75.50,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Marble",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Kitchen Pattern Tile",
+    "description": "Stylish patterned tile perfect for kitchens",
+    "image": "https://i.ibb.co/XxvK3fZ/tile3.jpg",
+    "category": "pattern",
+    "price": 35.00,
+    "currency": "USD",
+    "dimensions": "50x50 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_004",
+    "title": "Bathroom Matte Tile",
+    "description": "Non-slip matte tile ideal for bathrooms",
+    "image": "https://i.ibb.co/pv0y0xv/tile4.jpg",
+    "category": "bathroom",
+    "price": 40.25,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": false
+  },
+  {
+    "id": "tile_005",
+    "title": "Geometric Wall Tile",
+    "description": "Modern geometric design for stylish walls",
+    "image": "https://i.ibb.co/4p9t5c9/tile5.jpg",
+    "category": "wall",
+    "price": 55.00,
+    "currency": "USD",
+    "dimensions": "30x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Luxury Stone Tile",
+    "description": "Natural stone tile with premium texture",
+    "image": "https://i.ibb.co/1J7b3gY/tile6.jpg",
+    "category": "stone",
+    "price": 90.00,
+    "currency": "USD",
+    "dimensions": "100x100 cm",
+    "material": "Stone",
+    "inStock": true
+  },
+  {
+    "id": "tile_007",
+    "title": "Outdoor Rough Tile",
+    "description": "Durable tile for outdoor flooring",
+    "image": "https://i.ibb.co/9gP3V1L/tile7.jpg",
+    "category": "outdoor",
+    "price": 60.00,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Granite",
+    "inStock": true
+  },
+  {
+    "id": "tile_008",
+    "title": "Minimal White Tile",
+    "description": "Clean and minimal tile for modern homes",
+    "image": "https://i.ibb.co/3m5z9bW/tile8.jpg",
+    "category": "minimal",
+    "price": 30.00,
+    "currency": "USD",
+    "dimensions": "50x50 cm",
+    "material": "Ceramic",
+    "inStock": true
+  }
+]
