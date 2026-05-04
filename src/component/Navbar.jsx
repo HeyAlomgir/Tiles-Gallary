@@ -35,8 +35,13 @@ export default function Navbar() {
                     <div className="hidden md:block ">
 
                         <div className="flex items-center gap-4">
+                            <Link href={"/signIn"}>
                             <Button color="primary">SignIn</Button>
-                            <Button color="primary">SignUp</Button>
+                            </Link>
+                            <Link href={"/signUp"}>
+                            <Button color="primary">SignUP</Button>
+                            </Link>
+                           
                         </div>
                     </div>
 

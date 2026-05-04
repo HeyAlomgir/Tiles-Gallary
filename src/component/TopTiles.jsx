@@ -32,7 +32,7 @@ const TopTiles = async () => {
 
             <h1 className="text-4xl font-bold text-center py-9">Our Products</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-15">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-15 m-4">
                 {featuredTiles.map(tiles => <TilesCard key={tiles.id} tiles={tiles}></TilesCard>)}
             </div>
 
