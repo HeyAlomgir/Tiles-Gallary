@@ -1,19 +1,23 @@
-import { Button, Card, Chip, Separator } from '@heroui/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import Marquee from 'react-fast-marquee';
-import { GiStonePile } from 'react-icons/gi';
-import { MdAttachMoney, MdOutlineSquareFoot } from 'react-icons/md';
+import { Button, Card, Chip, Separator } from "@heroui/react";
+import Image from "next/image";
+import Link from "next/link";
+import { GiStonePile } from "react-icons/gi";
+import { MdAttachMoney, MdOutlineSquareFoot } from "react-icons/md";
 
 
-const TilesCard = ({ tiles }) => {
+const TilsDetails = async({params}) => {
+    const {id} = await params;
+    // console.log(id);
+
+    const res = await fetch("https://tiles-gallary-eight.vercel.app/data.json");
+    const tiless = await res.json();
+
+
+    const tiles = tiless.find (t => t.id == id)
     return (
-        <div>
-
-                
-
-
-            <Card className='border rounded-2xl my-5 '>
+        <div className="">
+            <Card className='border rounded-2xl my-5  max-w-1xl
+            md:max-w-2xl lg:max-w-3xl'>
                 <div className=' relative w-full aspect-square'>
                     <Image
                         src={tiles.image}
@@ -27,6 +31,7 @@ const TilesCard = ({ tiles }) => {
                 </div>
                 <div>
                     <h2 className='font-bold'>{tiles.title}</h2>
+                    <p className="text-muted">{tiles.description}</p>
 
                 </div>
 
@@ -65,14 +70,11 @@ const TilesCard = ({ tiles }) => {
                 </div>
 
 
-                <Link href={`/all-tiles/${tiles.id}`}>
-                    <Button variant='outline' className={"w-full"}>View Details</Button>
-                </Link>
-
+                
 
             </Card>
         </div>
     );
 };
 
-export default TilesCard;
+export default TilsDetails;
