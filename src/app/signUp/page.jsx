@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import { FaGoogle } from "react-icons/fa";
 
 export default function SignUpPage() {
@@ -31,7 +32,10 @@ export default function SignUpPage() {
     })
     console.log(data,error);
     if(!error){
+        toast.success("signUP successful")
         router.push("/signIn")
+    }else{
+       toast.error("signUP failed")
     }
   };
 
