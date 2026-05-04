@@ -2,7 +2,9 @@ import TilesCard from "./TilesCard";
 
 
 const TopTiles = async() => {
-    const  res = await fetch("https://tiles-gallary-eight.vercel.app/data.json");
+    const  res = await fetch("https://tiles-gallary-eight.vercel.app/data.json",{
+        cache:"no-store"
+    })
     const tiles = await res.json();
     // console.log(tiles);
     const featuredTiles = tiles.slice(0,4);
