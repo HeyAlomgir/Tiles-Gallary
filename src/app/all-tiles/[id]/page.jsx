@@ -15,9 +15,9 @@ const TilsDetails = async({params}) => {
 
     const tiles = tiless.find (t => t.id == id)
     return (
-        <div className="">
-            <Card className='border rounded-2xl my-5  max-w-1xl
-            md:max-w-2xl lg:max-w-3xl'>
+        <div className="bg-gray-200 container mx-auto">
+            <Card className='border rounded-2xl my-5  max-w-1xl mx-auto
+            md:max-w-2xl lg:max-w-2xl'>
                 <div className=' relative w-full aspect-square'>
                     <Image
                         src={tiles.image}
