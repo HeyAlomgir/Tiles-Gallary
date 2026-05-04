@@ -2,11 +2,24 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@heroui/react";
+import { Avatar, Button } from "@heroui/react";
 import LogoImg from "../assets/img/logo.png";
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
 
 export default function Navbar() {
+
+    const userData = authClient.useSession();
+    // console.log(userData);
+    const user = userData.data?.user;
+    // console.log(user);
+
+
+const handleSignOut=async()=>{
+    await authClient.signOut();
+}
+
+
     const [open, setOpen] = useState(false);
 
     return (
@@ -28,20 +41,35 @@ export default function Navbar() {
                     <div className="hidden md:flex gap-8 font-medium">
                         <Link href="/">Home</Link>
                         <Link href="/all-tiles">All Tiles</Link>
-                        <Link href="/my-profile">My Profile</Link>
+                        <Link href="/profile">My Profile</Link>
                     </div>
 
 
                     <div className="hidden md:block ">
 
-                        <div className="flex items-center gap-4">
-                            <Link href={"/signIn"}>
-                            <Button color="primary">SignIn</Button>
-                            </Link>
-                            <Link href={"/signUp"}>
-                            <Button color="primary">SignUP</Button>
-                            </Link>
-                           
+                        <div className="">
+                            {!user && <ul className="flex items-center gap-3">
+                                <Link href={"/signIn"}>
+                                    <Button color="primary">SignIn</Button>
+                                </Link>
+                                <Link href={"/signUp"}>
+                                    <Button color="primary">SignUP</Button>
+                                </Link>
+                            </ul>}
+
+                            {user && (
+                                <div className="flex items-center gap-3">
+                                    <Avatar size="sm">
+                                        <Avatar.Image alt="John Doe" src={user?.image}
+                                        referrerPolicy="no-feferr"
+                                        />
+                                        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                                    </Avatar>
+
+                                     <Button onClick={handleSignOut} variant="danger" size="sm">SignOut</Button>
+                                </div>
+                            )}
+
                         </div>
                     </div>
 
@@ -64,9 +92,9 @@ export default function Navbar() {
                     <div className="flex flex-col gap-4 bg-gray-100 p-4 rounded-xl">
                         <Link href="/">Home</Link>
                         <Link href="/all-tiles">All Tiles</Link>
-                        <Link href="/my-profile">My Profile</Link>
+                        <Link href="/profile">My Profile</Link>
 
-                        <Button color="primary">Login</Button>
+                        <Button color="primary">SignIn</Button>
                     </div>
                 </div>
             </nav>
